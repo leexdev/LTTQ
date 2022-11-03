@@ -36,9 +36,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(565, 308);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 32);
+            this.label1.Size = new System.Drawing.Size(229, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Le Ngu";
+            this.label1.Text = "Le Ngu Nhu Con Bo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
