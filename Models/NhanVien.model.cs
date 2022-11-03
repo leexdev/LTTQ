@@ -13,6 +13,10 @@ namespace QuanLyQuanGaRan.Models
         private string gioitinh;
         private DateTime ngaysinh;
 
-
+        public string MaNV
+        {
+            get { return maNV; }
+            set { maNV = value; }
+        }
     }
 }
