@@ -147,6 +147,7 @@
             this.btnXoaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaKH.Font = new System.Drawing.Font("Arial", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnXoaKH.ForeColor = System.Drawing.Color.White;
+            this.btnXoaKH.Image = global::QuanLyQuanGaRan.Properties.Resources.delete1;
             this.btnXoaKH.Location = new System.Drawing.Point(534, 536);
             this.btnXoaKH.Name = "btnXoaKH";
             this.btnXoaKH.Size = new System.Drawing.Size(157, 69);
@@ -162,6 +163,7 @@
             this.btnSuaKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuaKH.Font = new System.Drawing.Font("Arial", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnSuaKH.ForeColor = System.Drawing.Color.White;
+            this.btnSuaKH.Image = global::QuanLyQuanGaRan.Properties.Resources.tools1;
             this.btnSuaKH.Location = new System.Drawing.Point(310, 536);
             this.btnSuaKH.Name = "btnSuaKH";
             this.btnSuaKH.Size = new System.Drawing.Size(157, 69);
@@ -177,6 +179,7 @@
             this.btnThemKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemKH.Font = new System.Drawing.Font("Arial", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnThemKH.ForeColor = System.Drawing.Color.White;
+            this.btnThemKH.Image = global::QuanLyQuanGaRan.Properties.Resources.add_user1;
             this.btnThemKH.Location = new System.Drawing.Point(78, 536);
             this.btnThemKH.Name = "btnThemKH";
             this.btnThemKH.Size = new System.Drawing.Size(157, 69);
@@ -412,6 +415,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::QuanLyQuanGaRan.Properties.Resources.TongDonHang1;
             this.pictureBox1.Location = new System.Drawing.Point(282, 22);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 154);
@@ -455,6 +459,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = global::QuanLyQuanGaRan.Properties.Resources.TongThanhTien1;
             this.pictureBox2.Location = new System.Drawing.Point(299, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 133);
@@ -498,6 +503,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::QuanLyQuanGaRan.Properties.Resources.DHGanNhat3;
             this.pictureBox3.Location = new System.Drawing.Point(294, 31);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(156, 148);
