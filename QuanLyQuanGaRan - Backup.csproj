@@ -26,7 +26,6 @@
   <ItemGroup>
     <Folder Include="icon\" />
     <Folder Include="Resources\" />
-    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>
