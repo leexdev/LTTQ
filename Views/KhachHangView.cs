@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanGaRan.Views
 {
-    public partial class KhachHangView : Form, IKhachHangView
+    public partial class fKhachHangView : Form, IKhachHangView
     {
         private string message;
         private bool isSuccessful;
         private bool isEdit;
 
-        public KhachHangView()
+        public fKhachHangView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
@@ -33,6 +33,7 @@ namespace QuanLyQuanGaRan.Views
                 }
             };
         }
+
 
         public string MaKH { get { return txbMaKH.Text; } set { txbMaKH.Text = value; } }
         public string TenKH { get { return txbTenKH.Text; } set { txbTenKH.Text = value; } }
@@ -56,6 +57,19 @@ namespace QuanLyQuanGaRan.Views
             dtgvKH.DataSource = khachHanglist;
         }
 
+        private static fKhachHangView instance;
+        public static fKhachHangView GetInstance()
+        {
+            if(instance == null || instance.IsDisposed)
+                instance = new fKhachHangView();
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -74,6 +88,17 @@ namespace QuanLyQuanGaRan.Views
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbNgayHienTai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KhachHangView_Load_1(object sender, EventArgs e)
+        {
+            lbNgayHienTai.Text = DateTime.Now.ToString();
+            btnHome.FlatAppearance.BorderSize = 0;
         }
     }
 }
