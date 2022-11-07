@@ -173,6 +173,16 @@ namespace QuanLyQuanGaRan.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kfc_PNG53 {
+            get {
+                object obj = ResourceManager.GetObject("kfc_PNG53", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap TongDonHang {
             get {
                 object obj = ResourceManager.GetObject("TongDonHang", resourceCulture);
@@ -226,6 +236,16 @@ namespace QuanLyQuanGaRan.Properties {
         internal static System.Drawing.Bitmap tools1 {
             get {
                 object obj = ResourceManager.GetObject("tools1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user {
+            get {
+                object obj = ResourceManager.GetObject("user", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

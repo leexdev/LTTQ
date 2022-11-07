@@ -23,7 +23,7 @@ namespace QuanLyQuanGaRan.Presenters
 
         private void ShowKhachHangView(object? sender, EventArgs e)
         {
-            IKhachHangView view = fKhachHangView.GetInstance();
+            IKhachHangView view = fKhachHangView.GetInstance((fMainView)mainView);
             IKhachHangRepository repository = new KhachHangRepository(sqlConnectionString);
             new KhachHangPresenter(view, repository);
         }

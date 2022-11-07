@@ -58,10 +58,15 @@ namespace QuanLyQuanGaRan.Views
         }
 
         private static fKhachHangView instance;
-        public static fKhachHangView GetInstance()
+        public static fKhachHangView GetInstance(Form parentContainer)
         {
             if(instance == null || instance.IsDisposed)
+            {
                 instance = new fKhachHangView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
             else
             {
                 if(instance.WindowState == FormWindowState.Minimized)
@@ -97,8 +102,35 @@ namespace QuanLyQuanGaRan.Views
 
         private void KhachHangView_Load_1(object sender, EventArgs e)
         {
-            lbNgayHienTai.Text = DateTime.Now.ToString();
-            btnHome.FlatAppearance.BorderSize = 0;
+            btnThemKH.FlatAppearance.BorderSize = 0;
+            btnSuaKH.FlatAppearance.BorderSize = 0;
+            btnXoaKH.FlatAppearance.BorderSize = 0;
+            btnTimKiemKH.FlatAppearance.BorderSize = 0;
+        }
+
+        private void txbTenKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbSdtKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCmndKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbMaKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbDiaChiKH_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
