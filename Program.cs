@@ -1,6 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using QuanLyQuanGaRan.Models;
+using QuanLyQuanGaRan.Presenters;
+using QuanLyQuanGaRan._Repositories;
+using QuanLyQuanGaRan.Views;
+
 namespace QuanLyQuanGaRan
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -8,10 +18,12 @@ namespace QuanLyQuanGaRan
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            string sqlConnectionString = "Data Source=LEE;Initial Catalog=QuanLyBanGaRan;Integrated Security=True";
+            IMainView view = new fMainView();
+            new MainPresenter(view, sqlConnectionString);
+            Application.Run((Form)view);
         }
     }
 }

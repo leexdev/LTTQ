@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace QuanLyQuanGaRan.Views
 {
-    public partial class KhachHangView : Form, IKhachHangView
+    public partial class fKhachHangView : Form, IKhachHangView
     {
         private string message;
         private bool isSuccessful;
         private bool isEdit;
 
-        public KhachHangView()
+        public fKhachHangView()
         {
             InitializeComponent();
             AssociateAndRaiseViewEvent();
@@ -33,6 +33,7 @@ namespace QuanLyQuanGaRan.Views
                 }
             };
         }
+
 
         public string MaKH { get { return txbMaKH.Text; } set { txbMaKH.Text = value; } }
         public string TenKH { get { return txbTenKH.Text; } set { txbTenKH.Text = value; } }
@@ -56,6 +57,24 @@ namespace QuanLyQuanGaRan.Views
             dtgvKH.DataSource = khachHanglist;
         }
 
+        private static fKhachHangView instance;
+        public static fKhachHangView GetInstance(Form parentContainer)
+        {
+            if(instance == null || instance.IsDisposed)
+            {
+                instance = new fKhachHangView();
+                instance.MdiParent = parentContainer;
+                instance.FormBorderStyle = FormBorderStyle.None;
+                instance.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                if(instance.WindowState == FormWindowState.Minimized)
+                    instance.WindowState = FormWindowState.Normal;
+                instance.BringToFront();
+            }
+            return instance;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +91,44 @@ namespace QuanLyQuanGaRan.Views
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNgayHienTai_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KhachHangView_Load_1(object sender, EventArgs e)
+        {
+            btnThemKH.FlatAppearance.BorderSize = 0;
+            btnSuaKH.FlatAppearance.BorderSize = 0;
+            btnXoaKH.FlatAppearance.BorderSize = 0;
+            btnTimKiemKH.FlatAppearance.BorderSize = 0;
+        }
+
+        private void txbTenKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbSdtKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbCmndKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbMaKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbDiaChiKH_TextChanged(object sender, EventArgs e)
         {
 
         }
