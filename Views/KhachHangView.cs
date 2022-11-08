@@ -25,11 +25,59 @@ namespace QuanLyQuanGaRan.Views
         private void AssociateAndRaiseViewEvent()
         {
             btnTimKiemKH.Click += delegate { SearchEvent?.Invoke(this, EventArgs.Empty); };
-            btnTimKiemKH.KeyDown += (s, e) =>
+            txbTimKiemKH.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
                     SearchEvent?.Invoke(this, EventArgs.Empty);
+                }
+            };
+
+            //add new
+            btnThemKH.Click += delegate 
+            { 
+                AddNewEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpDanhSachKH);
+                tabControl1.TabPages.Add(tpTTKH);
+                tpTTKH.Text = "Thêm khách hàng";
+
+            };
+
+            //edit
+            btnSuaKH.Click += delegate 
+            {
+                EditEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpDanhSachKH);
+                tabControl1.TabPages.Add(tpTTKH);
+                tpTTKH.Text = "Sửa khách hàng";
+            };
+
+            btnLuu.Click += delegate
+            {
+                SaveEvent?.Invoke(this, EventArgs.Empty);
+                if (isSuccessful)
+                {
+                    tabControl1.TabPages.Remove(tpTTKH);
+                    tabControl1.TabPages.Add(tpDanhSachKH);
+                }
+                MessageBox.Show(message);
+            };
+
+            btnHuyBo.Click += delegate
+            {
+                CancelEvent?.Invoke(this, EventArgs.Empty);
+                tabControl1.TabPages.Remove(tpTTKH);
+                tabControl1.TabPages.Add(tpDanhSachKH);
+            };
+
+            //delete
+            btnXoaKH.Click += delegate 
+            {
+                var result = MessageBox.Show("Bạn có muốn xóa khách hàng này không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteEvent?.Invoke(this, EventArgs.Empty);
+                    MessageBox.Show(Message);
                 }
             };
         }
@@ -106,6 +154,8 @@ namespace QuanLyQuanGaRan.Views
             btnSuaKH.FlatAppearance.BorderSize = 0;
             btnXoaKH.FlatAppearance.BorderSize = 0;
             btnTimKiemKH.FlatAppearance.BorderSize = 0;
+            this.tpTTKH.Hide();
+            tabControl1.TabPages.Remove(tpTTKH);
         }
 
         private void txbTenKH_TextChanged(object sender, EventArgs e)
@@ -131,6 +181,10 @@ namespace QuanLyQuanGaRan.Views
         private void txbDiaChiKH_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtgvKH_Click(object sender, EventArgs e)
+        {
         }
     }
 }

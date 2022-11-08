@@ -17,17 +17,50 @@ namespace QuanLyQuanGaRan._Repositories
         }
         public void Add(KhachHangModel khachHangModel)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "insert into KhachHang values (@MaKH, @TenKH, @NgaySinh, @DiaChi, @SDT)";
+                command.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = khachHangModel.MaKH;
+                command.Parameters.Add("@TenKH", SqlDbType.NVarChar).Value = khachHangModel.TenKH;
+                command.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = khachHangModel.NgaySinh;
+                command.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = khachHangModel.DiaChi;
+                command.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = khachHangModel.SDT;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Delete(string maKH)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "delete from KhachHang where MaKH = @MaKH";
+                command.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = maKH;
+                command.ExecuteNonQuery();
+            }
         }
 
         public void Edit(KhachHangModel khachHangModel)
         {
-            throw new NotImplementedException();
+
+            using (var connection = new SqlConnection(connectionString))
+            using (var command = new SqlCommand())
+            {
+                connection.Open();
+                command.Connection = connection;
+                command.CommandText = "update KhachHang set TenKH = @TenKH, NgaySinh = @NgaySinh, DiaChi = @DiaChi, SDT = @SDT where MaKH = @MaKH";
+                command.Parameters.Add("@TenKH", SqlDbType.NVarChar).Value = khachHangModel.TenKH;
+                command.Parameters.Add("@NgaySinh", SqlDbType.Date).Value = khachHangModel.NgaySinh;
+                command.Parameters.Add("@DiaChi", SqlDbType.NVarChar).Value = khachHangModel.DiaChi;
+                command.Parameters.Add("@SDT", SqlDbType.NVarChar).Value = khachHangModel.SDT;
+                command.Parameters.Add("@MaKH", SqlDbType.NVarChar).Value = khachHangModel.MaKH;
+                command.ExecuteNonQuery();
+            }
         }
 
         public IEnumerable<KhachHangModel> GetAll()

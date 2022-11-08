@@ -43,27 +43,82 @@ namespace QuanLyQuanGaRan.Presenters
 
         private void CancelAction(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            CleanviewFields();
         }
 
         private void SaveKhachHang(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var model = new KhachHangModel();
+            model.MaKH = view.MaKH;
+            model.TenKH = view.TenKH;
+            model.NgaySinh = view.NgaySinh;
+            model.DiaChi = view.DiaChi;
+            model.SDT = view.SDT;
+
+            try
+            {
+                new Common.ModelDataValidation().Validate(model);
+                if (view.IsEdit)
+                {
+                    repository.Edit(model);
+                    view.Message = "Sửa thành công";
+                }
+                else
+                {
+                    repository.Add(model);
+                    view.Message = "Thêm thành công";
+                }
+                view.IsSuccessful = true;
+                LoadAllKhachHangList();
+                CleanviewFields();
+            }
+            catch (Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = ex.Message;
+            }
         }
 
         private void DeletedSelectedKhachHang(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var khachhang = (KhachHangModel)khachHangBindingSourse.Current;
+                repository.Delete(khachhang.MaKH);
+                view.IsSuccessful = true;
+                view.Message = "Xóa thành công!";
+                LoadAllKhachHangList();
+            }
+            catch(Exception ex)
+            {
+                view.IsSuccessful = false;
+                view.Message = "Không thể xóa!";
+            }
         }
 
         private void LoadSelectedKhachHangToEdit(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var khachhang = (KhachHangModel)khachHangBindingSourse.Current;
+            view.MaKH = khachhang.MaKH;
+            view.TenKH = khachhang.TenKH;
+            view.NgaySinh = khachhang.NgaySinh;
+            view.DiaChi = khachhang.DiaChi;
+            view.SDT = khachhang.SDT;
+            view.IsEdit = true;
+        }
+
+        private void CleanviewFields()
+        {
+            view.MaKH = "";
+            view.TenKH = "";
+            view.NgaySinh = DateTime.Now;
+            view.DiaChi = "";
+            view.SDT = "";
         }
 
         private void AddNewKhachHang(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.IsEdit = false;
         }
 
         private void SearchKhachHang(object? sender, EventArgs e)

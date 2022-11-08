@@ -80,7 +80,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(247, 606);
+            this.panel1.Size = new System.Drawing.Size(247, 660);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -90,9 +90,9 @@
             this.panel2.Controls.Add(this.lbCapBac);
             this.panel2.Controls.Add(this.lbTaiKhoan);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Location = new System.Drawing.Point(-1, 468);
+            this.panel2.Location = new System.Drawing.Point(-1, 522);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 124);
+            this.panel2.Size = new System.Drawing.Size(251, 138);
             this.panel2.TabIndex = 9;
             // 
             // btnDangXuat
@@ -102,9 +102,9 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(-4, 89);
+            this.btnDangXuat.Location = new System.Drawing.Point(-4, 96);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(257, 32);
+            this.btnDangXuat.Size = new System.Drawing.Size(255, 42);
             this.btnDangXuat.TabIndex = 10;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -253,7 +253,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1289, 606);
+            this.ClientSize = new System.Drawing.Size(1142, 660);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
