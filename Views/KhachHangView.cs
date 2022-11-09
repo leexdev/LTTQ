@@ -32,6 +32,56 @@ namespace QuanLyQuanGaRan.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
                 }
             };
+            
+            var txbListKH = new List<TextBox> { txbMaKH, txbTenKH, txbDiaChiKH, txbSdtKH };
+            foreach(var txb in txbListKH)
+            {
+                txb.KeyDown += (s, e) =>
+                {
+                    if (e.KeyCode == Keys.Enter)
+                    {
+                        SaveEvent?.Invoke(this, EventArgs.Empty);
+                        if (isSuccessful)
+                        {
+                            tabControl1.TabPages.Remove(tpTTKH);
+                            tabControl1.TabPages.Add(tpDanhSachKH);
+                        }
+                        MessageBox.Show(message);
+                    }
+                    if (e.KeyCode == Keys.Escape)
+                    {
+                        tabControl1.TabPages.Remove(tpTTKH);
+                        tabControl1.TabPages.Add(tpDanhSachKH);
+                        txbMaKH.Clear();
+                        txbTenKH.Clear();
+                        txbDiaChiKH.Clear();
+                        txbSdtKH.Clear();
+                    }
+                };
+            }
+
+            dtpkNgaySinhKH.KeyDown += (s, e) =>
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    SaveEvent?.Invoke(this, EventArgs.Empty);
+                    if (isSuccessful)
+                    {
+                        tabControl1.TabPages.Remove(tpTTKH);
+                        tabControl1.TabPages.Add(tpDanhSachKH);
+                    }
+                    MessageBox.Show(message);
+                }
+                if (e.KeyCode == Keys.Escape)
+                {
+                    tabControl1.TabPages.Remove(tpTTKH);
+                    tabControl1.TabPages.Add(tpDanhSachKH);
+                    txbMaKH.Clear();
+                    txbTenKH.Clear();
+                    txbDiaChiKH.Clear();
+                    txbSdtKH.Clear();
+                }
+            };
 
             //add new
             btnThemKH.Click += delegate 
@@ -52,6 +102,7 @@ namespace QuanLyQuanGaRan.Views
                 tpTTKH.Text = "Sửa khách hàng";
             };
 
+            //save
             btnLuu.Click += delegate
             {
                 SaveEvent?.Invoke(this, EventArgs.Empty);
@@ -69,6 +120,7 @@ namespace QuanLyQuanGaRan.Views
                 tabControl1.TabPages.Remove(tpTTKH);
                 tabControl1.TabPages.Add(tpDanhSachKH);
             };
+
 
             //delete
             btnXoaKH.Click += delegate 
@@ -185,6 +237,11 @@ namespace QuanLyQuanGaRan.Views
 
         private void dtgvKH_Click(object sender, EventArgs e)
         {
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

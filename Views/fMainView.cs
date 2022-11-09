@@ -39,17 +39,6 @@ namespace QuanLyQuanGaRan.Views
             btnDangXuat.FlatAppearance.BorderSize = 0;
         }
 
-        private void btnTrangChu_MouseHover(object sender, EventArgs e)
-        {
-            btnTrangChu.ForeColor = Color.Black;
-            btnTrangChu.FlatAppearance.BorderSize = 0;
-        }
-
-        private void btnTrangChu_MouseLeave(object sender, EventArgs e)
-        {
-            btnTrangChu.BackColor = Color.Transparent;
-        }
-
         private void btnChiNhanh_MouseHover(object sender, EventArgs e)
         {
             btnChiNhanh.ForeColor = Color.Black;

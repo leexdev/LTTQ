@@ -62,8 +62,6 @@
             this.btnKhachHang.TabIndex = 1;
             this.btnKhachHang.Text = "Khách Hàng";
             this.btnKhachHang.UseVisualStyleBackColor = false;
-            this.btnKhachHang.MouseLeave += new System.EventHandler(this.btnKhachHang_MouseLeave);
-            this.btnKhachHang.MouseHover += new System.EventHandler(this.btnKhachHang_MouseHover);
             // 
             // panel1
             // 
@@ -102,9 +100,9 @@
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Location = new System.Drawing.Point(-4, 96);
+            this.btnDangXuat.Location = new System.Drawing.Point(13, 98);
             this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.Size = new System.Drawing.Size(255, 42);
+            this.btnDangXuat.Size = new System.Drawing.Size(220, 31);
             this.btnDangXuat.TabIndex = 10;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
@@ -114,7 +112,7 @@
             this.lbCapBac.AutoSize = true;
             this.lbCapBac.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbCapBac.ForeColor = System.Drawing.Color.White;
-            this.lbCapBac.Location = new System.Drawing.Point(96, 52);
+            this.lbCapBac.Location = new System.Drawing.Point(95, 57);
             this.lbCapBac.Name = "lbCapBac";
             this.lbCapBac.Size = new System.Drawing.Size(62, 19);
             this.lbCapBac.TabIndex = 2;
@@ -125,7 +123,7 @@
             this.lbTaiKhoan.AutoSize = true;
             this.lbTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.lbTaiKhoan.Location = new System.Drawing.Point(96, 26);
+            this.lbTaiKhoan.Location = new System.Drawing.Point(95, 31);
             this.lbTaiKhoan.Name = "lbTaiKhoan";
             this.lbTaiKhoan.Size = new System.Drawing.Size(62, 19);
             this.lbTaiKhoan.TabIndex = 1;
@@ -134,7 +132,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::QuanLyQuanGaRan.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(32, 31);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,8 +152,6 @@
             this.btnThongKe.TabIndex = 8;
             this.btnThongKe.Text = "Thống Kê";
             this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.MouseLeave += new System.EventHandler(this.btnThongKe_MouseLeave);
-            this.btnThongKe.MouseHover += new System.EventHandler(this.btnThongKe_MouseHover);
             // 
             // btnHoaDon
             // 
@@ -170,8 +166,6 @@
             this.btnHoaDon.TabIndex = 7;
             this.btnHoaDon.Text = "Hóa Đơn";
             this.btnHoaDon.UseVisualStyleBackColor = false;
-            this.btnHoaDon.MouseLeave += new System.EventHandler(this.btnHoaDon_MouseLeave);
-            this.btnHoaDon.MouseHover += new System.EventHandler(this.btnHoaDon_MouseHover);
             // 
             // btnKho
             // 
@@ -186,8 +180,6 @@
             this.btnKho.TabIndex = 6;
             this.btnKho.Text = "Kho";
             this.btnKho.UseVisualStyleBackColor = false;
-            this.btnKho.MouseLeave += new System.EventHandler(this.btnKho_MouseLeave);
-            this.btnKho.MouseHover += new System.EventHandler(this.btnKho_MouseHover);
             // 
             // btnNhanVien
             // 
@@ -202,8 +194,6 @@
             this.btnNhanVien.TabIndex = 5;
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.UseVisualStyleBackColor = false;
-            this.btnNhanVien.MouseLeave += new System.EventHandler(this.btnNhanVien_MouseLeave);
-            this.btnNhanVien.MouseHover += new System.EventHandler(this.btnNhanVien_MouseHover);
             // 
             // btnChiNhanh
             // 
@@ -218,8 +208,6 @@
             this.btnChiNhanh.TabIndex = 4;
             this.btnChiNhanh.Text = "Chi Nhánh";
             this.btnChiNhanh.UseVisualStyleBackColor = false;
-            this.btnChiNhanh.MouseLeave += new System.EventHandler(this.btnChiNhanh_MouseLeave);
-            this.btnChiNhanh.MouseHover += new System.EventHandler(this.btnChiNhanh_MouseHover);
             // 
             // btnTrangChu
             // 
@@ -234,8 +222,6 @@
             this.btnTrangChu.TabIndex = 3;
             this.btnTrangChu.Text = "Trang Chủ";
             this.btnTrangChu.UseVisualStyleBackColor = false;
-            this.btnTrangChu.MouseLeave += new System.EventHandler(this.btnTrangChu_MouseLeave);
-            this.btnTrangChu.MouseHover += new System.EventHandler(this.btnTrangChu_MouseHover);
             // 
             // pictureBox1
             // 
@@ -253,7 +239,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1142, 660);
+            this.ClientSize = new System.Drawing.Size(1213, 660);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
